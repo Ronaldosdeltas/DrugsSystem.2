@@ -1,8 +1,5 @@
 package backfirststeps.controller;
-import java.io.BufferedWriter;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
+import java.io.*;
 
 import backfirststeps.model.Itens;
 
@@ -26,7 +23,7 @@ public class DataBase {
             yu.close();
             ws.close();
             os.close();
-        System.out.println("Your medication"+itens.getName()+" was registed.");
+        System.out.println("Your medication "+itens.getName()+" was registered.");
         }catch (Exception e){
             System.out.println("Medication not registered");
             System.out.println(e);
@@ -42,6 +39,23 @@ public class DataBase {
     }
 
     public void delete(int code){
+
+    }
+    public void read(){
+        try {
+            InputStream is = new FileInputStream("medication.txt");
+            InputStreamReader isr = new InputStreamReader(is);
+            BufferedReader br = new BufferedReader(isr);
+
+            String line = br.readLine();
+
+            while(line!= null){
+                System.out.println(line);
+                line = br.readLine();
+            }
+        }catch (Exception e){
+            System.out.println("the file Couldn't be red." );
+        }
 
     }
 
