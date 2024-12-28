@@ -6,7 +6,7 @@ public class Itens {
     private int amount;
     private String type;
 
-    public Itens(int code, String name, int amount, String type) {
+    public Itens(String name, int amount, String type) {
         this.code = code;
         this.name = name;
         this.amount = amount;
