@@ -7,10 +7,17 @@ public class Itens {
     private String type;
 
     public Itens(String name, int amount, String type) {
-        this.code = code;
         this.name = name;
         this.amount = amount;
         this.type = type;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
     }
 
     public String getName() {

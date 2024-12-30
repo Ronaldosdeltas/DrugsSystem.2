@@ -12,10 +12,15 @@ public class Main {
         DataBase dataBase = new DataBase();
         ArrayList<Itens> itens = dataBase.read();
 
-        for(int i =0; i< itens.size(); i++){
+        /*for(int i =0; i< itens.size(); i++){
             System.out.println("Code:"+i+"-Name:"+itens.get(i).getName()+"Amount"+itens.get(i).getAmount()+"Type"+itens.get(i).getType());
+        }*/
+        Itens iten = dataBase.search(0 ,itens);
+        if(iten!=null)
+        System.out.println(iten.getName());
+        else {
+            System.out.println("Itens weren't found.");
         }
 
-    }
-
+   }
 }
