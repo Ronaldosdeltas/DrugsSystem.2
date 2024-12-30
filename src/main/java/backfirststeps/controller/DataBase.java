@@ -35,9 +35,7 @@ public class DataBase {
     public void editer(int code){
 
     }
-    public void search(int code){
 
-    }
 
     public void delete(int code){
 
@@ -73,6 +71,15 @@ public class DataBase {
             return itens;
         }catch (Exception e){
             System.out.println("the file Couldn't be read." );
+            return null;
+        }
+
+    }
+    public Itens search(int code, ArrayList<Itens> itens){
+        try {
+            Itens iten = itens.get(code);
+            return iten;
+        }catch (Exception e){
             return null;
         }
 
